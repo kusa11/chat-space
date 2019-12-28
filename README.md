@@ -1,4 +1,4 @@
-## groups_usersテーブ
+## groups_usersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -13,9 +13,9 @@
 |Column|Type|Options|
 |------|----|-------|
 |body|text|
-|image|string|
-|user_id|references|
-|group_id|references|
+|image|string|null: false, add_index: true|
+|user_id|references|null: false, add_index: true|
+|group_id|references|null: false, add_index: true|
 
 ## Association
 -  belongs_to :group
@@ -25,7 +25,6 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false, index: true|
-|email|string|
 
 ## Association
 - has_many :groups_users
