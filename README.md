@@ -12,10 +12,10 @@
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|body|text|null: false, foreign_key: true|
-|image|string|null: false, foreign_key: true|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|body|text|
+|image|string|
+|user_id|integer|
+|group_id|integer|
 
 ## Association
 -  belongs_to :group
@@ -24,8 +24,8 @@
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false, add_index: true|
-|email|string|null: false, unique: true|
+|name|string|null: false, index: true|
+|email|string|
 
 ## Association
 - has_many :groups_users
