@@ -13,9 +13,9 @@
 |Column|Type|Options|
 |------|----|-------|
 |body|text|
-|image|string|null: false, add_index: true|
-|user_id|references|null: false, add_index: true|
-|group_id|references|null: false, add_index: true|
+|image|string|index: true|
+|user_id|references|null: false, index: true|
+|group_id|references|null: false, index: true|
 
 ## Association
 -  belongs_to :group
