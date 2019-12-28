@@ -13,8 +13,8 @@
 |Column|Type|Options|
 |------|----|-------|
 |body|text|
-|image|string|index: true|
-|user_id|references|null: false, index: true|
+|image|string||
+|user_id|references|null: false, index: true, foreign__key: true|
 |group_id|references|null: false, index: true|
 
 ## Association
@@ -24,7 +24,7 @@
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false, index: true|
+|name|string|null: false, index: true, foreign_key: true|
 
 ## Association
 - has_many :groups_users
