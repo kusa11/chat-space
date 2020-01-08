@@ -1,0 +1,19 @@
+.side_bar
+  .side_bar__user-name
+    .side-header
+      .side_bar__name
+        hoge
+      .side_bar__icon
+        .side_bar__left-icon
+          = link_to "#", class: "contents__btn" do
+            = icon('fas', 'edit')
+        .side_bar__right-icon
+          = link_to "#", class: "contents__btn" do
+            = icon('fas', 'cog')
+  .group-list
+    = link_to "#", class: "font" do
+      .font
+        %p.font__top-text-box
+          rink
+        %p.font__bottom-text-box
+          まだメッセージがありません

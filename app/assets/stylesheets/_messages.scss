@@ -1,0 +1,211 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  .side_bar {
+    background-color: #2f3e51;  
+    width: 300px;
+    height: 100vh;
+    float: left;
+    &__user-name {
+      background-color: #253141;
+      height: 100px;
+      width: 300px;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      float: left;
+      .side-header {
+        width: 260px;
+        height: 20px;
+        font-weight: bold;
+        justify-content: space-between;
+        display: flex;
+        list-style: none;
+      }
+        .side_bar__name {
+          color: #ffffff;
+          font-size: 16px;
+        }
+        .side_bar__icon {
+          display: flex;
+        }
+          .side_bar__left-icon {
+            margin-right: 5px;
+          }
+          .side_bar__right-icon {
+          }
+            .contents__btn {
+              color: #ffffff;
+
+            }
+    }
+    
+    .group-list {
+      height: calc(100vh - 100px);
+      background-color: #2f3e51;
+      padding: 20px 20px 0;
+      overflow: scroll;
+      .font {
+        text-decoration: none;
+        font-size: 15px;
+        color: #ffffff;
+      
+        &__top-text-box {
+          width: 260px;
+        }
+        &__bottome-text-box {
+          height: 15px;
+          width: 260px;
+          margin-top: 20px;
+          color: #ffffff;
+          font-size: 11px;
+        }
+      }
+    }
+
+  }
+  
+
+  .chat_main {
+    background-color:#ffffff;
+    width : calc(100vw - 300px);
+    height: 100vh;
+    float: right;
+    position: relative;
+    &__group-info {
+      background-color: #ffffff;
+      height: 100px;
+      padding: 0 40px;
+      width: calc(100vw - 300px);
+      display: flex;
+      justify-content: space-between;
+      border-bottom: solid 1px #eee;
+      position: relative;
+      &__left-box {
+        margin-top: 35px; 
+        font-size: 20px;
+        &__bottom-box {
+          font-size: 12px;
+          margin-top: 15px;
+        }
+      }
+      &__right-box {
+        padding: 0 20px;
+        border:  1px solid;
+        line-height: 40px;
+        display: block;
+        color: #38aef0;
+        height: 40px;
+        width: 72px;
+        margin-top: 30px;
+        right: 40px;
+        position: absolute;
+      }
+        .btn {
+          font-size: 16px;
+          color: #38aef0;
+          text-decoration: none;
+        }
+    }
+    &__message-list {
+      background-color: #fafafa;
+      height: calc(100vh - 190px);
+      width: calc(100vw - 300px);
+      float: right;
+      padding: 40px 46px;
+      &__text {
+        padding-bottom: 40px;
+        &__id {
+          display: flex;
+          margin-bottom: 10px;
+          .message__name  {
+            color: #434a54;
+            font-size: 16px;
+            font-weight: bold;
+          }
+          .massage__date {
+            color: #999999;
+            font-size: 12px;
+            margin-left: 10px;
+          }
+        }
+        &__box {
+          color: #434a54;
+          font-size: 14px;
+          margin-bottom: 10px;
+        }
+
+
+        &__sec {
+          display: flex;
+          margin-bottom: 10px;
+          .message__name  {
+            color: #434a54;
+            font-size: 16px;
+            font-weight: bold;
+          }
+          .massage__date {
+            color: #999999;
+            font-size: 12px;
+            margin-left: 10px;
+          }
+        }
+        &__next {
+          color: #434a54;
+          font-size: 14px;
+          margin-bottom: 10px;
+        }
+
+
+      }
+    }
+    &__message-from {
+      background-color: #d2d2d2;
+      height: 90px;
+      width: calc(100vw - 300px);
+      position: absolute;
+      bottom: 0;
+      padding: 20px 40px;
+        .text-from__box {
+          display: flex;
+          .input-box {
+            width: 100%;
+            display: flex;
+            position: relative;
+            &__text {
+              height: 50px;
+              width: 100%;
+              color: #434a54;
+              border-style: none;
+              padding: 0 40px 0 10px;
+                  }
+            &__image {
+              cursor: pointer;
+              font-size: 1.3rem;
+              position: absolute;
+              top: 10px;
+              right: 10px;
+                  }
+            &__image-file {
+              display: none;
+                    }
+              }
+          .submit-btn {
+            width: 100px;
+            height: 50px;
+            padding: 0 30px;
+            margin-left: 15px;
+            background-color: #38aef0;
+            color: white;
+            cursor: pointer;
+          }
+      }
+    }
+  }
+} 
+
