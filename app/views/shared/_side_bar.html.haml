@@ -1,0 +1,17 @@
+.side_bar
+  .side-header
+    .side_bar__name
+      masa
+      .side_bar__icon
+        = link_to new_group_path do
+          %i.fa.fa-edit.header-items__icons--pen
+        = link_to edit_user_path(current_user.id) do
+          %i.fa.fa-cog.header-items__icons--cog
+  .group-list
+    - current_user.groups.each do |group|
+      .font
+        = link_to '#' do
+          %p.font__top-text-box
+            = group.name
+          %p.font__bottom-text-box
+            メッセージはまだありません。
