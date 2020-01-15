@@ -10,8 +10,8 @@
   .group-list
     - current_user.groups.each do |group|
       .font
-        = link_to group_messages_path(group) do
-          .font__top-text-box
+        = link_to '#' do
+          %p.font__top-text-box
             = group.name
-          .font__bottom-text-box
-            = group.show_last_message
+          %p.font__bottom-text-box
+            メッセージはまだありません。

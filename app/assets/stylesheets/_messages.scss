@@ -47,10 +47,8 @@
       overflow: scroll;
       .font {
         font-size: 15px;
-
         .font__top-text-box {
           width: 260px;
-          text-decoration: none;
           color: white;
         }
         .font__bottom-text-box {
@@ -58,7 +56,6 @@
           width: 260px;
           margin-top: 20px;
           font-size: 11px;
-          text-decoration: none;
           color: white;
         }
       }
