@@ -1,3 +1,6 @@
+.messages
+  = render @messages
+
 .chat_main
   .chat_main__group-info
     .chat_main__group-info__left-box
@@ -26,13 +29,12 @@
       %p.chat_main__message-list__text__next
         test
 
-  
   .chat_main__message-from
     %form.text-from__box
-      .input-box
-        %input{type: "text", class: "input-box__text", placeholder: "type a message"}
-        %label{class: "input-box__image"}
-          =icon('fas', 'image')
-        %input{type: "file", class: "input-box__image-file"}
-      %input{type: "submit", class: "submit-btn"}
-      
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'input-box__text', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'input-box__image' do
+            = icon('fas', 'image', class: 'icon')
+            = f.file_field :image, class: 'input-box__image-file'
+        = f.submit 'Send', class: 'submit-btn'

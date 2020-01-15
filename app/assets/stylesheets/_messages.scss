@@ -11,38 +11,33 @@
     width: 300px;
     height: 100vh;
     float: left;
-    &__user-name {
+    
+    .side-header {
       background-color: #253141;
       height: 100px;
       width: 300px;
       display: flex;
       align-items: center;
       padding: 0 20px;
-      float: left;
-      .side-header {
-        width: 260px;
-        height: 20px;
-        font-weight: bold;
-        justify-content: space-between;
-        display: flex;
-        list-style: none;
-      }
-        .side_bar__name {
-          color: #ffffff;
-          font-size: 16px;
-        }
-        .side_bar__icon {
-          display: flex;
-        }
-          .side_bar__left-icon {
-            margin-right: 5px;
-          }
-          .side_bar__right-icon {
-          }
-            .contents__btn {
-              color: #ffffff;
 
-            }
+      .side_bar__name {
+        color: #ffffff;
+        font-size: 16px;
+        width: 100%;
+      
+        .side_bar__icon {
+          float: right;
+          .header-items__icons--pen {
+            margin-right: 5px;
+            text-decoration: none;
+            color: white;
+
+          }
+          .header-items__icons--cog {
+            color: white;
+          }
+        }
+      }
     }
     
     .group-list {
@@ -51,23 +46,20 @@
       padding: 20px 20px 0;
       overflow: scroll;
       .font {
-        text-decoration: none;
         font-size: 15px;
-        color: #ffffff;
-      
-        &__top-text-box {
+        .font__top-text-box {
           width: 260px;
+          color: white;
         }
-        &__bottome-text-box {
+        .font__bottom-text-box {
           height: 15px;
           width: 260px;
           margin-top: 20px;
-          color: #ffffff;
           font-size: 11px;
+          color: white;
         }
       }
     }
-
   }
   
 
