@@ -60,5 +60,5 @@ $('#new_message').on('submit', function(e){
     alert('メッセージを送信できません');	
     })	
     return false;	
-})
+    })
 });
