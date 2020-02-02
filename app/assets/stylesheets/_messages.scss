@@ -115,7 +115,7 @@ a {
       float: right;
       padding: 40px 46px;
       overflow: scroll;
-      &__text {
+      .messages {
         &__id {
           display: flex;
           margin-bottom: 10px;
