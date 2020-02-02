@@ -1,7 +1,7 @@
 $(function() {
   function createImage(message){
    if(message.image){
-    return `<img class="lower-message__image" src='${message.image.url}'></img>`
+    return `<img class="lower-message__image" src='${message.image.url}'>`
    } else {
     return ``
    }
@@ -63,9 +63,9 @@ $(function() {
       if (messages.length !== 0) {
         var insertHTML= '';
         messages.forEach(function (message) {
-        insertHTML = buildHTML(message);
-        $('.messages').append(insertHTML); 
-        $('.chat_main__message-list').animate({ scrollTop: $('.chat_main__message-list')[0].scrollHeight});
+          insertHTML = buildHTML(message);
+          $('.messages').append(insertHTML); 
+          $('.chat_main__message-list').animate({ scrollTop: $('.chat_main__message-list')[0].scrollHeight});
         })
       }
     })
