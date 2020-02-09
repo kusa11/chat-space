@@ -28,6 +28,8 @@ set :keep_releases, 5
 
 # 元々記述されていた after 「'deploy:publishing', 'deploy:restart'」以下を削除して、次のように書き換え
 
+set :linked_files, %w{ config/secrets.yml }
+
 after 'deploy:publishing', 'deploy:restart'
 namespace :deploy do
   task :restart do

@@ -3,6 +3,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   # include CarrierWave::RMagick
   # include CarrierWave::MiniMagick
   include CarrierWave::MiniMagick
+
   # Choose what kind of storage to use for this uploader:
   # storage :fog
   storage :fog
@@ -43,6 +44,6 @@ class ImageUploader < CarrierWave::Uploader::Base
   # Avoid using model.id or version_name here, see uploader/store.rb for details.
   # def filename
   #   "something.jpg" if original_filename
-  process resize_to_fit: [100, 100]
+  process resize_to_fit: [800, 800]
   # end
 end
