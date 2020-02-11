@@ -1,7 +1,7 @@
 .side_bar
   .side-header
     .side_bar__name
-      ナゾノクサ
+      = current_user.name 
       .side_bar__icon
         = link_to new_group_path do
           %i.fa.fa-edit.header-items__icons--pen

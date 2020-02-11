@@ -1,7 +1,8 @@
 $(function() {
   function createImage(message){
+    console.log(message);
    if(message.image){
-    return `<img class="lower-message__image" src='${message.image.url}'>`
+    return `<img class="lower-message__image" src='${message.image}'>`
    } else {
     return ``
    }
@@ -29,6 +30,8 @@ $(function() {
 
   $('.new_message').on('submit', function(e){
     e.preventDefault();
+
+    
     var formData = new FormData(this);
     var url = $(this).attr('action');
     $.ajax({
@@ -55,7 +58,7 @@ $(function() {
     last_message_id = $('.message:last').data("id");
     $.ajax({
       url: "api/messages",
-      type: 'GET',
+      type: 'get',
       dataType: 'json',
       data: {id: last_message_id}
     })
@@ -65,6 +68,7 @@ $(function() {
         messages.forEach(function (message) {
           insertHTML = buildHTML(message);
           $('.messages').append(insertHTML); 
+          
           $('.chat_main__message-list').animate({ scrollTop: $('.chat_main__message-list')[0].scrollHeight});
         })
       }

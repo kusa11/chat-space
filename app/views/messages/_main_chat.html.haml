@@ -3,8 +3,8 @@
     .chat_main__group-info__left-box
       = @group.name
       .chat_main__group-info__left-box__bottom-box
+        Member:
         - @group.users.each do |u| 
-          Member:
           = u.name
     .chat_main__group-info__right-box
       = link_to edit_group_path(@group), class: "btn" do
